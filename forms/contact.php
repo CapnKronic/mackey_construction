@@ -8,6 +8,7 @@
 
 // Replace contact@example.com with your real receiving email address
 $receiving_email_address = 'info@jmackeyconstruction.com';
+$mail_subject = 'Contact Request';
 
 // if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
 //   include( $php_email_form );
@@ -21,7 +22,7 @@ $receiving_email_address = 'info@jmackeyconstruction.com';
 $to = $receiving_email_address;
 $from_name = $_POST['name'];
 $from_email = $_POST['email'];
-$subject = "Contact Request";
+$subject = $mail_subject;
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
@@ -39,5 +40,5 @@ $contact->smtp = array(
 // $contact->add_message( $_POST['message'], 'Message', 10);
 
 // echo $contact->send();
-echo $to, "\n", $from_name, "\n", $from_email,"\n",$phone, "\n", $subject, "\n", $message, mail($to, $subject, $message,[ "From:" . $from_email, "Phone:" . $phone]);
+echo $to, "\n", $from_name, "\n", $from_email, "\n", $subject, "\n", $message, mail($to, $subject, $message, "From:" . $from_email | "Phone" . $phone), "";
 ?>
