@@ -24,7 +24,7 @@ $from_name = $_POST['name'];
 $from_email = $_POST['email'];
 $subject = $mail_subject;
 $phone = $_POST['phone'];
-$message = $_POST['message']|"\r\n"|$phone;
+$message = $phone . "\r\n" . $_POST['message'];
 // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
 /*
 $contact->smtp = array(
@@ -41,5 +41,5 @@ $contact->smtp = array(
 
 // echo $contact->send();
 echo $to, "\n", $from_name, "\n", $from_email, "\n", $subject, "\n", $message;
- mail($to, $subject, $message, "From:" . $from_email );
+mail($to, $subject, $message, "From:" . $from_email);
 ?>
