@@ -41,5 +41,5 @@ $contact->smtp = array(
 
 // echo $contact->send();
 echo $to, "\n", $from_name, "\n", $from_email, "\n", $subject, "\n", $message;
- mail($to, $subject, $message, "From:" . $from_email | "Phone" . $phone);
+ mail($to, $subject, $message, "From:" . $from_email );
 ?>
