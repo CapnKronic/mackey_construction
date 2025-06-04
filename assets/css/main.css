@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Montserrat", sans-serif, "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Montserrat", sans-serif;
   --font-secondary: "Work Sans", sans-serif;
 }
@@ -258,10 +258,11 @@ section {
 .header {
   z-index: 997;
   position: absolute;
-  padding: 30px 0;
+  padding: 15px 0;
   top: 0;
   left: 0;
   right: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .header .logo img {
@@ -280,6 +281,25 @@ section {
 .header .logo h1 span {
   color: var(--color-primary);
 }
+
+.header i {
+  color: var(--color-primary);
+}
+.header h2 {
+  color: aliceblue;
+  font-size: 24px;
+  padding: 2px 0;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.header h2 span {
+  font-weight: 100;
+  color: var(--color-primary);
+}
+
+
 
 /*--------------------------------------------------------------
 # Desktop Navigation
