@@ -27,6 +27,7 @@ class Footer extends HTMLElement {
             <h4>Useful Links</h4>
             <ul>
               <li><a href="../index.html">Home</a></li>
+              <li><a href="../pages/projects.html">Projects</a></li>
               <li><a href="../pages/about.html">About us</a></li>
             </ul>
           </div>

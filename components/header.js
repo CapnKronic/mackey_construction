@@ -18,8 +18,9 @@ class Header extends HTMLElement {
                 <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../pages/about.html" class="active">About</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/projects.html">Projects</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
                     </ul>
                 </nav>
             </div>
