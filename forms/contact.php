@@ -1,7 +1,7 @@
 <?php
 
 $receiving_email_address = 'info@jmackeyconstruction.com';
-$mail_subject = 'Contact Request ';
+$mail_subject = 'Contact Request: ';
 
 
 
@@ -10,7 +10,7 @@ $from_name = $_POST['name'];
 $from_email = $_POST['email'];
 $subject = $mail_subject . $from_name;
 $phone = $_POST['phone'];
-$message = $from_name . $phone . "\r\n" . $_POST['message'];
+$message = $from_name . "\r\n" . $phone . "\r\n" . $from_email . "\r\n" . $_POST['message'];
 // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
 /*
 $contact->smtp = array(
