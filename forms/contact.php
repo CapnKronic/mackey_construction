@@ -47,11 +47,11 @@ die("Database connection failed: " . $dbconnect->connect_error);
 VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
 
 
-// if ($dbconnect->query($query) === TRUE) {
-// echo "New record created successfully";
-// }
+if ($dbconnect->query($query) === TRUE) {
+echo "New record created successfully";
+}
 
-$conn->close();
+$dbconnect->close();
 
 
 ?>
