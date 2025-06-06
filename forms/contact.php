@@ -1,7 +1,11 @@
 <?php
 
 
-$hostname = '.\MSSQLSERVER2016:0';
+$receiving_email_address = 'test@jmackeyconstruction.com';
+// $receiving_email_address = 'info@jmackeyconstruction.com';
+$mail_subject = 'Contact Request: ';
+
+$hostname = 'LocalHost';
 $username = 'kronicjo';
 $password = '$M0kin5258';
 $db = "jmc";
@@ -16,10 +20,6 @@ if (isset($_POST['submit'])) {
   // $user_name=$_POST['username'];
 // $user_password=$_POST['psw'];
 
-
-  $receiving_email_address = 'test@jmackeyconstruction.com';
-  // $receiving_email_address = 'info@jmackeyconstruction.com';
-  $mail_subject = 'Contact Request: ';
 
 
 
