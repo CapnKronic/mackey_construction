@@ -52,7 +52,8 @@ if ($dbconnect->query($query) === TRUE) {
 
 $dbconnect->close();
 
-mail($to, $subject, $str, "From:" . $from_email);
-echo "Request Sent";
+if(mail($to, $subject, $str, "From:" . $from_email)===TRUE){
+  echo "OK";
+}
 
 ?>
