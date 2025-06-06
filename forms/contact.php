@@ -29,7 +29,7 @@ $contact->smtp = array(
 mail($to, $subject, $message, "From:" . $from_email);
 echo "Request Sent";
 
-$hostname = 'localhost';
+$hostname = '';
 $username = 'kronicjo';
 $password = '$M0kin5258';
 $db = 'jmc';
