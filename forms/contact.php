@@ -8,9 +8,11 @@ $mail_subject = 'Contact Request: ';
 $to = $receiving_email_address;
 $from_name = $_POST['name'];
 $from_email = $_POST['email'];
+$address = $_POST['address'];
 $subject = $mail_subject . $from_name;
 $phone = $_POST['phone'];
-$message = $from_name . "\r\n" . $phone . "\r\n" . $from_email . "\r\n" . $_POST['message'];
+$message = $_POST['message'];
+$str = $from_name . "\r\n" . $phone . "\r\n" . $from_email . "\r\n" . $address . "\r\n" . $message;
 // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
 /*
 $contact->smtp = array(
