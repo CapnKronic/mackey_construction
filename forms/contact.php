@@ -29,7 +29,7 @@ echo "Request Sent";
 
 
 $hostname= "";
-$username = "DbAdmin";
+$username = "web";
 $password = "SM0kin52581";
 $db = "jmc";
 
