@@ -28,7 +28,7 @@ mail($to, $subject, $str, "From:" . $from_email);
 echo "Request Sent";
 
 
-$hostname= '173.199.114.177';
+$hostname= '173.199.114.177.\MSSQLSERVER2016:0';
 $username = 'kronicjo';
 $password = '$M0kin5258';
 $db = 'jmc';
