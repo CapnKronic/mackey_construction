@@ -5,6 +5,20 @@ $receiving_email_address = 'test@jmackeyconstruction.com';
 // $receiving_email_address = 'info@jmackeyconstruction.com';
 $mail_subject = 'Contact Request: ';
 
+  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
+/*
+$contact->smtp = array(
+  'host' => 'example.com',
+  'username' => 'example',
+  'password' => 'pass',
+  'port' => '587'
+);
+*/
+
+  // echo $to, "\n", $from_name, "\n", $from_email, "\n", $subject, "\n", $message;
+mail($to, $subject, $message, "From:" . $from_email);
+echo "Request Sent";
+
 $hostname = 'localhost';
 $username = 'kronicjo';
 $password = '$M0kin5258';
@@ -45,19 +59,6 @@ VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
 
 
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-/*
-$contact->smtp = array(
-  'host' => 'example.com',
-  'username' => 'example',
-  'password' => 'pass',
-  'port' => '587'
-);
-*/
-
-  // echo $to, "\n", $from_name, "\n", $from_email, "\n", $subject, "\n", $message;
-// mail($to, $subject, $message, "From:" . $from_email);
-// echo "Request Sent";
 
 
 
