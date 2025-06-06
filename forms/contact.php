@@ -41,7 +41,7 @@ if ($dbconnect->connect_error) {
   die("Database connection failed: " . $dbconnect->connect_error);
 }
 
-if (isset($_POST['submit'])) {
+// if (isset($_POST['submit'])) {
   // $user_name=$_POST['username'];
 // $user_password=$_POST['psw'];
 
@@ -52,7 +52,7 @@ VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
 
   if ($dbconnect->query($query) === TRUE) {
     echo "New record created successfully";
-  }
+  // }
 
   $conn->close();
 
