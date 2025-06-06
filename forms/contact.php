@@ -26,4 +26,31 @@ $contact->smtp = array(
 // echo $to, "\n", $from_name, "\n", $from_email, "\n", $subject, "\n", $message;
 mail($to, $subject, $str, "From:" . $from_email);
 echo "Request Sent";
+
+
+$hostname= "localhost";
+$username = "kronicjo";
+$password = "SM0kin52581";
+$db = "jmc";
+
+$dbconnect=mysqli_connect($hostname,$username,$password,$db);
+
+if ($dbconnect->connect_error) {
+die("Database connection failed: " . $dbconnect->connect_error);
+}
+
+// if(isset($_POST['submit'])) {
+
+
+  $query = "INSERT INTO web_contacts (contact, phone, email, addr, notes)
+VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
+
+
+if ($dbconnect->query($query) === TRUE) {
+echo "New record created successfully";
+}
+
+$conn->close();
+
+
 ?>
