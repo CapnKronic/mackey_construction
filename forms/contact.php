@@ -1,9 +1,9 @@
 <?php
 
 
-$hostname = ".\MSSQLSERVER2016:0";
-$username = "kronicjo";
-$password = "$M0kin5258";
+$hostname = '.\MSSQLSERVER2016:0';
+$username = 'kronicjo';
+$password = '$M0kin5258';
 $db = "jmc";
 
 $dbconnect = mysqli_connect($hostname, $username, $password, $db);
