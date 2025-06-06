@@ -24,6 +24,6 @@ $contact->smtp = array(
 */
 
 // echo $to, "\n", $from_name, "\n", $from_email, "\n", $subject, "\n", $message;
-mail($to, $subject, $message, "From:" . $from_email);
+mail($to, $subject, $str, "From:" . $from_email);
 echo "Request Sent";
 ?>
