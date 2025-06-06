@@ -43,7 +43,7 @@ die("Database connection failed: " . $dbconnect->connect_error);
 // if(isset($_POST['submit'])) {
 
 
-  $query = "INSERT INTO webreq (contact, phone, email, addr, notes)
+  $query = "INSERT INTO webrequests (contact, phone, email, addr, notes)
 VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
 
 
