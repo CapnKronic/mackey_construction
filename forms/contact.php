@@ -53,6 +53,6 @@ if ($dbconnect->query($query) === TRUE) {
 $dbconnect->close();
 
 mail($to, $subject, $str, "From:" . $from_email);
-echo "OK";
+echo "Request Sent";
 
 ?>
