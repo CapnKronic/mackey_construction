@@ -31,7 +31,7 @@ echo "Request Sent";
 
 $hostname = '';
 $username = 'kronicjo';
-$password = '$M0kin5258';
+$password = 'SM0kin52581';
 $db = 'jmc';
 
 $dbconnect = mysqli_connect($hostname, $username, $password, $db);
