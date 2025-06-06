@@ -51,7 +51,7 @@ VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
 // echo "New record created successfully";
 // }
 
-$conn->close();
+$dbconnect->close();
 
 
 ?>
