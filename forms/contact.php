@@ -5,6 +5,16 @@ $receiving_email_address = 'test@jmackeyconstruction.com';
 // $receiving_email_address = 'info@jmackeyconstruction.com';
 $mail_subject = 'Contact Request: ';
 
+
+  $to = $receiving_email_address;
+  $from_name = $_POST['name'];
+  $from_email = $_POST['email'];
+  $address = 'Adress Placeholder';
+  // $address = $_POST['address'];
+  $subject = $mail_subject . $from_name;
+  $phone = $_POST['phone'];
+  $message = $from_name . "\r\n" . $phone . "\r\n" . $from_email . "\r\n" . $address . "\r\n" . $_POST['message'];
+
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
 /*
 $contact->smtp = array(
@@ -36,16 +46,6 @@ if (isset($_POST['submit'])) {
 // $user_password=$_POST['psw'];
 
 
-
-
-  $to = $receiving_email_address;
-  $from_name = $_POST['name'];
-  $from_email = $_POST['email'];
-  $address = 'Adress Placeholder';
-  // $address = $_POST['address'];
-  $subject = $mail_subject . $from_name;
-  $phone = $_POST['phone'];
-  $message = $from_name . "\r\n" . $phone . "\r\n" . $from_email . "\r\n" . $address . "\r\n" . $_POST['message'];
 
   $query = "INSERT INTO web_contacts (contact, phone, email, addr, notes)
 VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
