@@ -15,7 +15,7 @@ class Header extends HTMLElement {
                 </h2>
 
                 <h2 class="large-name">
-                    <i class="bi bi-buildings"></i>
+                    <!--<i class="bi bi-buildings"></i>-->
                     Mackey <span>Construction</span>
                 </h2>
                 </a>
