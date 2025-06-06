@@ -30,7 +30,7 @@ echo "Request Sent";
 
 $hostname= '173.199.114.177';
 $username = 'kronicjo';
-$password = '$M0kin52581';
+$password = '$M0kin5258';
 $db = 'jmc';
 
 $dbconnect=mysqli_connect($hostname,$username,$password,$db);
