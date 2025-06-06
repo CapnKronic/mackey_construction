@@ -5,7 +5,7 @@ $receiving_email_address = 'test@jmackeyconstruction.com';
 // $receiving_email_address = 'info@jmackeyconstruction.com';
 $mail_subject = 'Contact Request: ';
 
-$hostname = 'localhost';
+$hostname = '.\MSSQLSERVER2016:0';
 $username = 'kronicjo';
 $password = '$M0kin5258';
 $db = "jmc";
