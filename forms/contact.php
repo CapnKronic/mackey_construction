@@ -28,10 +28,11 @@ mail($to, $subject, $str, "From:" . $from_email);
 echo "Request Sent";
 
 
-$hostname= '173.199.114.177';
-$username = 'kronicjo';
-$password = '$M0kin5258';
-$db = 'jmc';
+// $hostname= '173.199.114.177';
+$hostname= '';
+$username = 'webreq';
+$password = 'SM0kin52581';
+$db = 'web_req';
 
 $dbconnect=mysqli_connect($hostname,$username,$password,$db);
 
@@ -42,7 +43,7 @@ die("Database connection failed: " . $dbconnect->connect_error);
 // if(isset($_POST['submit'])) {
 
 
-  $query = "INSERT INTO web_contacts (contact, phone, email, addr, notes)
+  $query = "INSERT INTO webreq (contact, phone, email, addr, notes)
 VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
 
 
