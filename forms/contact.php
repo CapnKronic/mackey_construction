@@ -11,6 +11,7 @@ $from_email = $_POST['email'];
 $address = $_POST['address'];
 $subject = $mail_subject . $from_name;
 $phone = $_POST['phone'];
+$ip=$_SERVER['REMOTE_ADDR'];
 $message = $_POST['message'];
 $str = $from_name . "\r\n" . $phone . "\r\n" . $from_email . "\r\n" . $address . "\r\n" . $message;
 // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
@@ -41,8 +42,8 @@ if ($dbconnect->connect_error) {
 // if(isset($_POST['submit'])) {
   
 
-$query = "INSERT INTO webrequests (contact, phone, email, addr, notes)
-VALUES ('$from_name', '$phone', '$from_email', '$address', '$message')";
+$query = "INSERT INTO webrequests (contact, phone, email, addr, notes, ip)
+VALUES ('$from_name', '$phone', '$from_email', '$address', '$message', '$ip')";
 
 
 if ($dbconnect->query($query) === TRUE) {
