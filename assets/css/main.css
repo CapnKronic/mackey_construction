@@ -301,10 +301,12 @@ section {
 
 .large-name {
   visibility: visible;
+  
 }
 
 .small-name {
   display: none;
+  font-size: 36px!important;
   white-space: nowrap;
 }
 
@@ -314,6 +316,7 @@ section {
   }
 
   .small-name {
+
     display: block;
   }
 }
