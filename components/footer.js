@@ -15,7 +15,7 @@ class Footer extends HTMLElement {
               <h3 style="white-space: nowrap; font-weight: 500;">Mackey <span style="font-weight: 100;">Construction</span></h3>
               <p>
                 DALLAS TX<br><br>
-                <strong>Phone:</strong> +1 (214)555-5555<br>
+               <!-- <strong>Phone:</strong> +1 (214)555-5555<br>-->
                 <strong>Email:</strong> info@jmackeyconstruction.com<br>
               </p>
               <div class="social-links d-flex mt-3">
