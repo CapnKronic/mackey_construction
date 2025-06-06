@@ -28,10 +28,10 @@ mail($to, $subject, $str, "From:" . $from_email);
 echo "Request Sent";
 
 
-$hostname= "";
-$username = "web";
-$password = "SM0kin52581";
-$db = "jmc";
+$hostname= '';
+$username = 'web';
+$password = 'SM0kin52581';
+$db = 'jmc';
 
 $dbconnect=mysqli_connect($hostname,$username,$password,$db);
 
