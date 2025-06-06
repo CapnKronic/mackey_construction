@@ -29,7 +29,7 @@ echo "Request Sent";
 
 
 // $hostname= '173.199.114.177';
-$hostname= '';
+$hostname= 'localhost:3306';
 $username = 'webreq';
 $password = 'SM0kin52581';
 $db = 'web_req';
