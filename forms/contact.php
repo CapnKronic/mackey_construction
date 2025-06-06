@@ -8,11 +8,12 @@ $mail_subject = 'Contact Request: ';
 $hostname = '173.199.114.177';
 $username = 'kronicjo';
 $password = '$M0kin5258';
-$db = "jmc";
+$db = 'jmc';
 
 $dbconnect = mysqli_connect($hostname, $username, $password, $db);
 
 if ($dbconnect->connect_error) {
+  echo 'NOT CONNECTED ' . $dbconnect->connect_error;
   die("Database connection failed: " . $dbconnect->connect_error);
 }
 
