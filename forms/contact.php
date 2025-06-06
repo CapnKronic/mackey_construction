@@ -47,19 +47,19 @@ VALUES ('$from_name', '$phone', '$from_email', '$address', '$message', '$ip')";
 
 
 if ($dbconnect->query($query) === TRUE) {
-  echo "New record created successfully";
+  // echo "New record created successfully";
 }
-else {
-  echo "Failed to add record";
-}
+// else {
+  // echo "Failed to add record";
+// }
 
 $dbconnect->close();
 
 if (mail($to, $subject, $str, "From:" . $from_email) === TRUE) {
   echo "OK";
 }
-else {
-  echo "Failed to send contact request";
-}
+// else {
+  // echo "Failed to send contact request";
+// }
 
 ?>
