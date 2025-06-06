@@ -29,8 +29,8 @@ echo "Request Sent";
 
 
 $hostname= '173.199.114.177';
-$username = 'web';
-$password = 'SM0kin52581';
+$username = 'kronicjo';
+$password = '$M0kin52581';
 $db = 'jmc';
 
 $dbconnect=mysqli_connect($hostname,$username,$password,$db);
