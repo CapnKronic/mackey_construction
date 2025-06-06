@@ -40,7 +40,7 @@ if ($dbconnect->connect_error) {
   die("Database connection failed: " . $dbconnect->connect_error);
 }
 
-// if(isset($_POST['submit'])) {
+if(isset($_POST['submit'])) {
   
 
 $query = "INSERT INTO webrequests (contact, phone, email, addr, notes, ip)
@@ -56,5 +56,5 @@ $dbconnect->close();
 if(mail($to, $subject, $str, "From:" . $from_email)===TRUE){
   echo "OK";
 }
-
+}
 ?>
