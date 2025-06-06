@@ -1,6 +1,6 @@
 <?php
 
-$receiving_email_address = 'info@jmackeyconstruction.com';
+$receiving_email_address = 'test@jmackeyconstruction.com';
 $mail_subject = 'Contact Request: ';
 
 
