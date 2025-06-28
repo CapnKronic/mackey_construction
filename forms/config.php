@@ -1,0 +1,11 @@
+<?php
+
+class Config
+{
+
+    const GOOGLE_RECAPTCHA_SITE_KEY = '6LeKw3ArAAAAAIAvvxNw06Z9YACNsJaNC0huhuwM';
+
+    const GOOGLE_RECAPTCHA_SECRET_KEY = '6LeKw3ArAAAAALNcnbeXt2GrJ2bM3vwp57IvKyJ0';
+}
+
+?>
