@@ -10,15 +10,18 @@
 # Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 --------------------------------------------------------------*/
 /* Fonts */
+
 :root {
-  --font-default: "Montserrat", sans-serif, "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Montserrat", sans-serif;
+  /*, "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
   --font-primary: "Montserrat", sans-serif;
-  --font-secondary: "Work Sans", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+  /* --font-secondary: "Work Sans", sans-serif; */
 }
 
 /* Colors */
 :root {
-  --color-default: #364d59;
+  --color-default: #59364d;
   --color-primary: #CC5500;
   --color-secondary: #52565e;
 }
@@ -37,9 +40,11 @@ body {
   overflow-x: hidden;
 }
 
-a {
+a,
+li {
   color: var(--color-primary);
   text-decoration: none;
+  font-weight: 400;
 }
 
 a:hover {
@@ -258,7 +263,7 @@ section {
 .header {
   z-index: 997;
   position: absolute;
-  padding: 15px 0;
+  padding: 5px 0;
   top: 0;
   left: 0;
   right: 0;
@@ -266,8 +271,9 @@ section {
 }
 
 .header .logo img {
+  min-height: 30px;
   max-height: 40px;
-  margin-right: 6px;
+  margin-right: 0px;
 }
 
 .header .logo h1 {
@@ -285,29 +291,38 @@ section {
 .header i {
   color: var(--color-primary);
 }
+
 .header h2 {
   color: aliceblue;
   font-size: 24px;
   padding: 2px 0;
   line-height: 1;
   font-weight: 500;
-  text-transform: uppercase;
+  color: var(--color-primary);
 }
 
 .header h2 span {
   font-weight: 100;
-  color: var(--color-primary);
+  color: #fff;
 }
 
 .large-name {
+  white-space: wrap;
   visibility: visible;
-  
+  text-transform: uppercase;
+
 }
 
 .small-name {
   display: none;
-  font-size: 36px !important;
+  font-weight: 500 !important;
+  font-size: 46px !important;
   white-space: nowrap;
+}
+
+.small-name span {
+  font-weight: 100 !important;
+  color: #fff;
 }
 
 @media (max-width:500px) {
@@ -316,7 +331,6 @@ section {
   }
 
   .small-name {
-
     display: block;
   }
 }
@@ -2627,6 +2641,11 @@ section {
   position: relative;
 }
 
+.footer .row {
+  justify-content: space-between;
+}
+
+
 .footer:before {
   content: "";
   background: rgba(0, 0, 0, 0.8);
@@ -2729,10 +2748,13 @@ section {
   color: var(--color-primary);
 }
 
+.footer .logo {
+  max-height: 24px;
+  margin-right: 0px;
+}
 
 
-
-  .proj-img {
-    flex: 0 0 auto;
-    width: 25%;
-  }
+.proj-img {
+  flex: 0 0 auto;
+  width: 25%;
+}

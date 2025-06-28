@@ -12,7 +12,9 @@ class Footer extends HTMLElement {
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3 style="white-space: nowrap; font-weight: 500;">Mackey <span style="font-weight: 100;">Construction</span></h3>
+              <h3 style="white-space: nowrap; font-weight: 500;">
+             <!-- <img class="logo" src="../assets/svg/mack_logo.svg" /> -->
+              Mackey <span style="font-weight: 100;">Construction</span></h3>
               <p>
                 DALLAS TX<br><br>
                <!-- <strong>Phone:</strong> +1 (214)555-5555<br>-->

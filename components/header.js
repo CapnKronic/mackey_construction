@@ -9,13 +9,14 @@ class Header extends HTMLElement {
         <header id="header" class="header d-flex align-items-center">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
                 <a href="../index.html" class="logo d-flex align-items-center">
+              <img class="logo" src="../assets/svg/mack_logo.svg" />
+                
                 <h2 class="small-name">
-                    <i class="bi bi-buildings"></i>
+                   
                     M<span>C</span>
                 </h2>
 
                 <h2 class="large-name">
-                    <!--<i class="bi bi-buildings"></i>-->
                     Mackey <span>Construction</span>
                 </h2>
                 </a>
