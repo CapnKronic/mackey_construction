@@ -1,32 +1,32 @@
 <?php
 
-require_once __DIR__ . '/config.php';
+// require_once __DIR__ . '/config.php';
 
-$reCaptchaToken = $_POST['recaptcha_token'];
-$postArray = array(
-    'secret' => Config::GOOGLE_RECAPTCHA_SECRET_KEY,
-    'response' => $reCaptchaToken
-);
+// $reCaptchaToken = $_POST['recaptcha_token'];
+// $postArray = array(
+//     'secret' => Config::GOOGLE_RECAPTCHA_SECRET_KEY,
+//     'response' => $reCaptchaToken
+// );
 
-$postJSON = http_build_query($postArray);
+// $postJSON = http_build_query($postArray);
 
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($curl, CURLOPT_POST, 1);
-curl_setopt($curl, CURLOPT_POSTFIELDS, $postJSON);
-$response = curl_exec($curl);
-curl_close($curl);
-$curlResponseArray = json_decode($response, true);
+// $curl = curl_init();
+// curl_setopt($curl, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+// curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+// curl_setopt($curl, CURLOPT_POST, 1);
+// curl_setopt($curl, CURLOPT_POSTFIELDS, $postJSON);
+// $response = curl_exec($curl);
+// curl_close($curl);
+// $curlResponseArray = json_decode($response, true);
 
-if ($curlResponseArray["success"] == true && ! empty($curlResponseArray["action"]) && $curlResponseArray["score"] >= 0.5) {
-    mail("admin@site.com", "New report", $_POST["txt_report"]);
-    $output = "<div id='phppot-message' class='success'>Feedback received.</div>";
-} else {
-    $output = "<div id='phppot-message' class='error'>Invalid request.</div>";
-}
-print $output;
-exit();
+// if ($curlResponseArray["success"] == true && ! empty($curlResponseArray["action"]) && $curlResponseArray["score"] >= 0.5) {
+//     mail("admin@site.com", "New report", $_POST["txt_report"]);
+//     $output = "<div id='phppot-message' class='success'>Feedback received.</div>";
+// } else {
+//     $output = "<div id='phppot-message' class='error'>Invalid request.</div>";
+// }
+// print $output;
+// exit();
 
 
 // $receiving_email_address = 'test@jmackeyconstruction.com';
