@@ -63,21 +63,14 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
 
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <img class="logo" src="assets/svg/mack_logo.svg" />
-        <!-- <span style="font-weight: 600;">M</span><span style="font-weight: 300;">C </span> -->
         <h2 class="small-name">
-          <!-- <i class="bi bi-buildings"></i> -->
           M<span>C</span>
         </h2>
 
         <h2 class="large-name">
-          <!-- <i class="bi bi-buildings"></i> -->
           Mackey <span>Construction</span>
         </h2>
-
-        <!-- <h1>Mackey Construction</h1> -->
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -166,8 +159,6 @@
             <div class="content">
               <h3>Get started on your vision today!</h3>
               <p>Contact us for a no obligation quote on your next build, remodel or commercial finish out
-                <!-- <p>Aliquam velit deserunt autem. Inventore et saepe. Tenetur suscipit eligendi labore culpa eos. Deserunt
-                porro magni qui necessitatibus dolorem at animi cupiditate.</p> -->
             </div>
           </div>
 
@@ -205,11 +196,23 @@
 
                   <div class="g-recaptcha" data-sitekey="6LcG5nArAAAAAOHYLGFbTLfUK2sequpL1ViqKrl7"></div>
                   <br>
-                  <button type="submit">Get a quote</button>
+                  <button id="submitButton" type="submit">Get a quote</button>
                 </div>
 
               </div>
             </form>
+            <script type="text/javascript">
+              function enableFormOrButton() {
+                const submitButton = document.getElementById("submitButton");
+                if (submitButton) {
+                  submitButton.removeAttribute("disabled");
+                }
+                // If you need to enable the entire form or other elements,
+                // you can add more logic here.
+                // For example:
+                // document.getElementById("myForm").classList.remove("disabled-form");
+              }
+            </script>
           </div><!-- End Quote Form -->
 
         </div>
@@ -651,9 +654,10 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-                     <h3 style="white-space: nowrap; font-weight: 500;">
-              <!-- <img class="logo" src="assets/svg/mack_logo.svg" /> -->
-              Mackey <span style="font-weight: 100;">Construction</span></h3>
+              <h3 style="white-space: nowrap; font-weight: 500;">
+                <!-- <img class="logo" src="assets/svg/mack_logo.svg" /> -->
+                Mackey <span style="font-weight: 100;">Construction</span>
+              </h3>
               <p>
 
                 DALLAS TX<br><br>
@@ -678,7 +682,7 @@
               <!-- <li><a href="#">Privacy policy</a></li> -->
             </ul>
           </div>
-          
+
         </div>
       </div>
     </div>
