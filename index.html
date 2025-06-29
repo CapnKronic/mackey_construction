@@ -194,23 +194,19 @@
                   <div class="sent-message">Your request has been sent successfully. Someone will contact you soon!
                   </div>
 
-                  <div class="g-recaptcha" data-sitekey="6LcG5nArAAAAAOHYLGFbTLfUK2sequpL1ViqKrl7"></div>
+                  <div class="g-recaptcha" data-callback="enableForm"
+                    data-sitekey="6LcG5nArAAAAAOHYLGFbTLfUK2sequpL1ViqKrl7"></div>
                   <br>
-                  <button id="submitButton" type="submit" disabled>Submit</button>
+                  <button id="submitBtn" type="submit" disabled>Submit</button>
                 </div>
 
               </div>
             </form>
+
             <script type="text/javascript">
-              function enableFormOrButton() {
-                const submitButton = document.getElementById("submitButton");
-                if (submitButton) {
-                  submitButton.removeAttribute("disabled");
-                }
-                // If you need to enable the entire form or other elements,
-                // you can add more logic here.
-                // For example:
-                // document.getElementById("myForm").classList.remove("disabled-form");
+              function enableForm() {
+                document.getElementById("submitBtn").disabled = false;
+                alert("callback working");
               }
             </script>
           </div><!-- End Quote Form -->
