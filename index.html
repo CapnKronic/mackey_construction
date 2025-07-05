@@ -194,7 +194,7 @@
                   <div class="sent-message">Your request has been sent successfully. Someone will contact you soon!
                   </div>
 
-                  <div class="g-recaptcha" data-callback="enableForm"
+                  <div id="recap" class="g-recaptcha" data-callback="enableForm"
                     data-sitekey="6LcG5nArAAAAAOHYLGFbTLfUK2sequpL1ViqKrl7"></div>
                   <br>
                   <button id="submitBtn" type="submit" disabled>Submit</button>
@@ -206,6 +206,7 @@
             <script type="text/javascript">
               function enableForm() {
                 document.getElementById("submitBtn").disabled = false;
+                document.getElementById("recap").style.display = 'none';
                 console.log("callback working");
               }
             </script>
