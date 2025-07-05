@@ -45,7 +45,7 @@ if ($dbconnect->connect_error) {
 
 
 if (filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
-  if (filter_var($contact, FILTER_SANITIZE_SPECIAL_CHARS)) {
+  if (filter_var($from_name, FILTER_SANITIZE_SPECIAL_CHARS)) {
     if (mail($to, $subject, $str, "From:" . $from_email) === TRUE) {
       echo "OK";
 
