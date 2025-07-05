@@ -45,7 +45,8 @@ if ($dbconnect->connect_error) {
 
 
 if (filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
-  if (filter_var($from_name, FILTER_SANITIZE_SPECIAL_CHARS)) {
+  // if (filter_var($from_name, FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>"[a-zA-Z]")))) {
+  if (ctype_alpha($from_name)) {
     if (mail($to, $subject, $str, "From:" . $from_email) === TRUE) {
       echo "OK";
 
