@@ -44,17 +44,21 @@ if ($dbconnect->connect_error) {
 
 
 
-if (filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
+if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
+  echo "Invalid Email Address";
+} else {
   // if (filter_var($from_name, FILTER_VALIDATE_REGEXP,array("options"=>array("regexp"=>"[a-zA-Z]")))) {
   // if (ctype_alnum($from_name)) {
-    if (preg_match('#^[a-z0-9 ]+$#i', $from_name)) {
+  if (!preg_match('#^[a-z0-9 ]+$#i', $from_name)) {
+    echo "Invalid Characters";
+  } else {
     if (mail($to, $subject, $str, "From:" . $from_email) === TRUE) {
       echo "OK";
 
       $query = "INSERT INTO webrequests (contact, phone, email, addr, notes, ip)
     VALUES ('$from_name', '$phone', '$from_email', '$address', '$message', '$ip')";
       if ($dbconnect->query($query) === FALSE) {
-        print ("FAILED");
+      
         // echo "Failed to add record";
       }
       //  else {
@@ -63,11 +67,8 @@ if (filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
 
       $dbconnect->close();
     }
-  } else {
-    echo "Invalid Characters";
+
   }
-} else {
-  echo "Invalid Email Address";
 }
 
 ?>
