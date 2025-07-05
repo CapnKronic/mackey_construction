@@ -44,8 +44,7 @@ if ($dbconnect->connect_error) {
 
 
 
-if (isset($from_email)) {
-
+if (filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
 
   if (mail($to, $subject, $str, "From:" . $from_email) === TRUE) {
     echo "OK";
@@ -53,16 +52,18 @@ if (isset($from_email)) {
     $query = "INSERT INTO webrequests (contact, phone, email, addr, notes, ip)
     VALUES ('$from_name', '$phone', '$from_email', '$address', '$message', '$ip')";
     if ($dbconnect->query($query) === FALSE) {
-      echo "Failed to add record";
-    } else {
-      echo "New record created successfully";
+      print("FAILED");
+      // echo "Failed to add record";
     }
+    //  else {
+      // echo "New record created successfully";
+    // }
 
     $dbconnect->close();
   }
 
 } else {
-  echo "Failed to send contact request";
+  echo "Invalid Email Address";
 }
 
 ?>
